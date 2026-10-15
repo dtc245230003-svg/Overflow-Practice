@@ -3,20 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố cục bằng Float và Clear</title>
+    <title>Thực hành Tạo Bố Cục Cơ Bản</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <div class="left-column">
-            <h2>Cột bên trái (Main Content)</h2>
-            <p>Cột bên trái chiếm 60% chiều rộng khung chứa và dùng <code>float: left</code> để trôi về phía bên trái.</p>
+    <!-- Khung chứa toàn bộ trang web -->
+    <div id="main">
+        
+        <!-- 1. Phân vùng Đầu trang (Logo & Banner) -->
+        <div id="head">
+            <h1>LOGO & BANNER WEBSITE</h1>
         </div>
-        <div class="right-column">
-            <h3>Cột bên phải (Sidebar)</h3>
-            <p>Cột bên phải chiếm 38% chiều rộng và dùng <code>float: right</code> để trôi về phía bên phải.</p>
+
+        <!-- 2. Phân vùng Thanh liên kết đầu trang -->
+        <div id="head-link">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Students</a></li>
+                <li><a href="#">Course</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
+
+        <!-- 3. Phân vùng Nội dung bên trái (Menu/Sidebar Trái) -->
+        <div id="left">
+            <h3>Danh mục trái</h3>
+            <ul>
+                <li><a href="#">Khóa học HTML/CSS</a></li>
+                <li><a href="#">Khóa học JavaScript</a></li>
+                <li><a href="#">Khóa học ReactJS</a></li>
+                <li><a href="#">Tài liệu tham khảo</a></li>
+            </ul>
+        </div>
+
+        <!-- 4. Phân vùng Nội dung chính ở giữa -->
+        <div id="content">
+            <h2>Hot News</h2>
+            <p>Thông tin tin tức mới nhất và các sự kiện nổi bật trong tuần của trung tâm...</p>
+            
+            <h2>Photo Slide</h2>
+            <p>Khu vực hiển thị bộ sưu tập hình ảnh hoạt động và hình ảnh nổi bật...</p>
+            
+            <h2>News 1</h2>
+            <p>Chi tiết bài viết tin tức 1 về chương trình đào tạo lập trình web chuyên nghiệp.</p>
+        </div>
+
+        <!-- 5. Phân vùng Thông tin bên phải (Sidebar Phải) -->
+        <div id="right">
+            <h3>Thông tin phải</h3>
+            <p>📅 Lịch công tác</p>
+            <p>📊 Biểu đồ học tập</p>
+            <p>🗺️ Bản đồ vị trí</p>
+        </div>
+
+        <!-- 6. Phân vùng Chân trang -->
+        <div id="footer">
+            <p>&copy; 2026 CodeGym Practice - Basic Website Layout Design</p>
+        </div>
+
     </div>
 
 </body>
