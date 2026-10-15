@@ -3,65 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành Tạo Bố Cục Cơ Bản</title>
+    <title>Thực hành Bố cục HTML5 Ngữ Nghĩa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Khung chứa toàn bộ trang web -->
-    <div id="main">
+    <div class="container">
         
-        <!-- 1. Phân vùng Đầu trang (Logo & Banner) -->
-        <div id="head">
-            <h1>LOGO & BANNER WEBSITE</h1>
-        </div>
+        <!-- 1. Thẻ <header>: Tiêu đề, Logo, Banner -->
+        <header>
+            <h1>Bố Cục Trang Web Với Thẻ HTML5</h1>
+            <p>Xây dựng giao diện hiện đại, tối ưu SEO với thẻ ngữ nghĩa</p>
+        </header>
 
-        <!-- 2. Phân vùng Thanh liên kết đầu trang -->
-        <div id="head-link">
+        <!-- 2. Thẻ <nav>: Thanh điều hướng menu -->
+        <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Students</a></li>
-                <li><a href="#">Course</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Liên hệ</a></li>
             </ul>
-        </div>
+        </nav>
 
-        <!-- 3. Phân vùng Nội dung bên trái (Menu/Sidebar Trái) -->
-        <div id="left">
-            <h3>Danh mục trái</h3>
-            <ul>
-                <li><a href="#">Khóa học HTML/CSS</a></li>
-                <li><a href="#">Khóa học JavaScript</a></li>
-                <li><a href="#">Khóa học ReactJS</a></li>
-                <li><a href="#">Tài liệu tham khảo</a></li>
-            </ul>
-        </div>
-
-        <!-- 4. Phân vùng Nội dung chính ở giữa -->
-        <div id="content">
-            <h2>Hot News</h2>
-            <p>Thông tin tin tức mới nhất và các sự kiện nổi bật trong tuần của trung tâm...</p>
+        <!-- Khung bao bọc nội dung chính và sidebar -->
+        <div class="main-wrapper">
             
-            <h2>Photo Slide</h2>
-            <p>Khu vực hiển thị bộ sưu tập hình ảnh hoạt động và hình ảnh nổi bật...</p>
-            
-            <h2>News 1</h2>
-            <p>Chi tiết bài viết tin tức 1 về chương trình đào tạo lập trình web chuyên nghiệp.</p>
+            <!-- 3. Thẻ <section>: Khu vực chứa nội dung các bài viết -->
+            <section class="content-area">
+                
+                <!-- Thẻ <article>: Bài viết độc lập 1 -->
+                <article>
+                    <h2>Bài viết 1: Ưu điểm của thẻ HTML5 ngữ nghĩa</h2>
+                    <p class="meta">Đăng ngày: 15/10/2026 bởi Tác giả</p>
+                    <p>Sử dụng các thẻ HTML5 ngữ nghĩa giúp cấu trúc mã nguồn trở nên rõ ràng hơn, dễ bảo trì và hỗ trợ các công cụ tìm kiếm (SEO) phân tích nội dung website chính xác hơn nhiều so với việc chỉ dùng thẻ &lt;div&gt;.</p>
+                </article>
+
+                <!-- Thẻ <article>: Bài viết độc lập 2 -->
+                <article>
+                    <h2>Bài viết 2: Kết hợp Flexbox trong dàn trang HTML5</h2>
+                    <p class="meta">Đăng ngày: 14/10/2026 bởi Tác giả</p>
+                    <p>Khi áp dụng CSS Flexbox lên các thẻ &lt;section&gt; và &lt;aside&gt;, giao diện có thể tự động căn chỉnh khoảng cách, co giãn linh hoạt và tương thích tốt trên nhiều thiết bị màn hình khác nhau.</p>
+                </article>
+
+            </section>
+
+            <!-- 4. Thẻ <aside>: Sidebar chứa thông tin phụ, liên kết bên cạnh -->
+            <aside class="sidebar">
+                <h3>Danh mục tin tức</h3>
+                <ul>
+                    <li><a href="#">Hướng dẫn HTML5/CSS3</a></li>
+                    <li><a href="#">Kỹ thuật CSS Layout</a></li>
+                    <li><a href="#">Tối ưu hóa SEO Onpage</a></li>
+                </ul>
+
+                <div class="widget">
+                    <h3>Thông tin bổ sung</h3>
+                    <p>Sidebar chứa thông tin phụ, quảng cáo hoặc bài viết nổi bật liên quan đến trang chủ.</p>
+                </div>
+            </aside>
+
         </div>
 
-        <!-- 5. Phân vùng Thông tin bên phải (Sidebar Phải) -->
-        <div id="right">
-            <h3>Thông tin phải</h3>
-            <p>📅 Lịch công tác</p>
-            <p>📊 Biểu đồ học tập</p>
-            <p>🗺️ Bản đồ vị trí</p>
-        </div>
-
-        <!-- 6. Phân vùng Chân trang -->
-        <div id="footer">
-            <p>&copy; 2026 CodeGym Practice - Basic Website Layout Design</p>
-        </div>
+        <!-- 5. Thẻ <footer>: Chân trang -->
+        <footer>
+            <p>&copy; 2026 CodeGym Practice - HTML5 & CSS Layout Design</p>
+        </footer>
 
     </div>
 

@@ -1,4 +1,4 @@
-/* Reset thuộc tính và cài đặt border-box */
+/* Reset lề mặc định & cài đặt border-box */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,151 +10,153 @@ body {
     background-color: #f4f4f4;
     color: #333333;
     padding: 20px 0;
+    line-height: 1.6;
 }
 
-/* 1. Phân vùng #main: Cố định độ rộng và căn giữa màn hình */
-#main {
-    width: 980px;
+/* Khung bọc toàn bộ trang web */
+.container {
+    width: 1000px;
     margin: 0 auto;
     background-color: #ffffff;
-    border: 1px solid #cccccc;
-    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-/* 2. Phân vùng #head */
-#head {
-    height: 120px;
+/* 1. Định dạng thẻ <header> */
+header {
     background-color: #2c3e50;
     color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    border: 1px solid #1a252f;
+    padding: 30px 20px;
+    text-align: center;
 }
 
-/* 3. Phân vùng #head-link */
-#head-link {
-    height: 40px;
+header h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 14px;
+    color: #bdc3c7;
+}
+
+/* 2. Định dạng thẻ <nav> */
+nav {
     background-color: #34495e;
-    margin-bottom: 10px;
-    border: 1px solid #2c3e50;
 }
 
-#head-link ul {
+nav ul {
     list-style: none;
     display: flex;
 }
 
-#head-link ul li a {
+nav ul li a {
     display: block;
-    padding: 0 20px;
-    line-height: 40px;
+    padding: 12px 20px;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
+    transition: background-color 0.2s ease;
 }
 
-#head-link ul li a:hover {
+nav ul li a:hover {
     background-color: #e74c3c;
 }
 
-/* 4. Phân vùng #left (Rộng 200px, dạt sang trái) */
-#left {
-    width: 200px;
-    min-height: 420px;
-    float: left;
-    background-color: #eef2f5;
-    border: 1px solid #bdc3c7;
-    padding: 15px;
+/* Khung Flexbox bọc Section & Aside */
+.main-wrapper {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
 }
 
-#left h3 {
-    font-size: 15px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #34495e;
-    padding-bottom: 5px;
+/* 3. Định dạng thẻ <section> & <article> */
+.content-area {
+    flex: 2.5;
 }
 
-#left ul {
+article {
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+article h2 {
+    font-size: 19px;
+    color: #2c3e50;
+    margin-bottom: 6px;
+}
+
+article .meta {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+article p {
+    font-size: 14px;
+    color: #444444;
+}
+
+/* 4. Định dạng thẻ <aside> */
+.sidebar {
+    flex: 1;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 6px;
+    height: fit-content;
+}
+
+.sidebar h3 {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 6px;
+}
+
+.sidebar ul {
     list-style: none;
+    margin-bottom: 20px;
 }
 
-#left ul li {
+.sidebar ul li {
     margin-bottom: 8px;
 }
 
-#left ul li a {
-    color: #2c3e50;
+.sidebar ul li a {
+    color: #34495e;
     text-decoration: none;
     font-size: 13px;
 }
 
-#left ul li a:hover {
+.sidebar ul li a:hover {
     color: #e74c3c;
+    text-decoration: underline;
 }
 
-/* 5. Phân vùng #content (Rộng 538px, nằm giữa) */
-#content {
-    width: 538px;
-    min-height: 420px;
-    float: left;
-    margin: 0 10px;
-    background-color: #ffffff;
-    border: 1px solid #bdc3c7;
-    padding: 15px;
-}
-
-#content h2 {
-    font-size: 17px;
-    color: #c0392b;
-    margin-bottom: 8px;
+.sidebar .widget {
     margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #cccccc;
 }
 
-#content h2:first-child {
-    margin-top: 0;
-}
-
-#content p {
-    line-height: 1.6;
-    color: #555555;
-    font-size: 14px;
-    margin-bottom: 12px;
-}
-
-/* 6. Phân vùng #right (Rộng 200px, dạt sang phải/tiếp nối) */
-#right {
-    width: 200px;
-    min-height: 420px;
-    float: left;
-    background-color: #eef2f5;
-    border: 1px solid #bdc3c7;
-    padding: 15px;
-}
-
-#right h3 {
-    font-size: 15px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #34495e;
-    padding-bottom: 5px;
-}
-
-#right p {
+.sidebar .widget p {
     font-size: 13px;
-    margin-bottom: 8px;
+    color: #666666;
 }
 
-/* 7. Phân vùng #footer: Khôi phục luồng dòng chảy (clear: both) */
-#footer {
-    clear: both;
-    height: 50px;
-    line-height: 50px;
+/* 5. Định dạng thẻ <footer> */
+footer {
     background-color: #2c3e50;
-    color: #ffffff;
+    color: #ecf0f1;
     text-align: center;
-    margin-top: 10px;
-    border: 1px solid #1a252f;
+    padding: 15px;
     font-size: 13px;
 }
