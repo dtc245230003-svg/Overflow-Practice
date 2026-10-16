@@ -1,4 +1,4 @@
-/* Reset lề mặc định & cài đặt border-box */
+/* Reset thuộc tính và thiết lập border-box toàn trang */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,157 +6,84 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
-    color: #333333;
-    padding: 20px 0;
-    line-height: 1.6;
-}
-
-/* Khung bọc toàn bộ trang web */
-.container {
-    width: 1000px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-/* 1. Định dạng thẻ <header> */
-header {
-    background-color: #2c3e50;
-    color: #ffffff;
-    padding: 30px 20px;
+    font-family: Arial, sans-serif;
     text-align: center;
-}
-
-header h1 {
-    font-size: 26px;
-    margin-bottom: 8px;
-}
-
-header p {
-    font-size: 14px;
-    color: #bdc3c7;
-}
-
-/* 2. Định dạng thẻ <nav> */
-nav {
-    background-color: #34495e;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li a {
-    display: block;
-    padding: 12px 20px;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    transition: background-color 0.2s ease;
-}
-
-nav ul li a:hover {
-    background-color: #e74c3c;
-}
-
-/* Khung Flexbox bọc Section & Aside */
-.main-wrapper {
-    display: flex;
-    padding: 20px;
-    gap: 20px;
-}
-
-/* 3. Định dạng thẻ <section> & <article> */
-.content-area {
-    flex: 2.5;
-}
-
-article {
-    background-color: #fafafa;
-    border: 1px solid #e0e0e0;
-    padding: 20px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-}
-
-article h2 {
-    font-size: 19px;
-    color: #2c3e50;
-    margin-bottom: 6px;
-}
-
-article .meta {
-    font-size: 12px;
-    color: #7f8c8d;
-    margin-bottom: 12px;
-    font-style: italic;
-}
-
-article p {
-    font-size: 14px;
-    color: #444444;
-}
-
-/* 4. Định dạng thẻ <aside> */
-.sidebar {
-    flex: 1;
     background-color: #f8f9fa;
-    border: 1px solid #e0e0e0;
+    color: #333333;
     padding: 20px;
-    border-radius: 6px;
-    height: fit-content;
 }
 
-.sidebar h3 {
-    font-size: 16px;
-    color: #2c3e50;
-    margin-bottom: 12px;
-    border-bottom: 2px solid #e74c3c;
-    padding-bottom: 6px;
-}
-
-.sidebar ul {
-    list-style: none;
+/* Tiêu đề trang */
+h1 {
     margin-bottom: 20px;
+    color: #2c3e50;
 }
 
-.sidebar ul li {
-    margin-bottom: 8px;
-}
-
-.sidebar ul li a {
-    color: #34495e;
-    text-decoration: none;
-    font-size: 13px;
-}
-
-.sidebar ul li a:hover {
-    color: #e74c3c;
-    text-decoration: underline;
-}
-
-.sidebar .widget {
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px dashed #cccccc;
-}
-
-.sidebar .widget p {
-    font-size: 13px;
-    color: #666666;
-}
-
-/* 5. Định dạng thẻ <footer> */
-footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    text-align: center;
+/* Thanh điều hướng (nav) */
+nav {
+    background-color: #ffffff;
     padding: 15px;
-    font-size: 13px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+nav a {
+    display: inline-block; /* Biến thẻ a thành khối nằm ngang có kích thước */
+    margin: 0 15px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+/* Khối section chính */
+section {
+    max-width: 1100px;
+    margin: 0 auto 30px auto;
+    font-size: 0; /* Xử lý khoảng trắng thừa mặc định giữa các phần tử inline-block */
+}
+
+/* Các cột .box xếp ngang bằng inline-block */
+.box {
+    display: inline-block;
+    width: 28%; /* Độ rộng mỗi cột */
+    max-width: 320px;
+    padding: 25px 20px;
+    background-color: #e0f2fe;
+    border: 1px solid #bae6fd;
+    border-radius: 8px;
+    margin: 10px 1.5%;
+    vertical-align: top; /* Căn lề trên cho các cột nằm thẳng hàng */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-size: 14px; /* Khôi phục lại kích thước chữ cho nội dung */
+    text-align: left;
+}
+
+.box h2 {
+    color: #0369a1;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.box p {
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* Chân trang (footer) */
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 14px;
 }

@@ -3,76 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành Bố cục HTML5 Ngữ Nghĩa</title>
+    <title>Bố cục với display và inline-block</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Khung chứa toàn bộ trang web -->
-    <div class="container">
-        
-        <!-- 1. Thẻ <header>: Tiêu đề, Logo, Banner -->
-        <header>
-            <h1>Bố Cục Trang Web Với Thẻ HTML5</h1>
-            <p>Xây dựng giao diện hiện đại, tối ưu SEO với thẻ ngữ nghĩa</p>
-        </header>
+    <!-- Tiêu đề chính trang web -->
+    <h1>Bố cục trang web với display</h1>
 
-        <!-- 2. Thẻ <nav>: Thanh điều hướng menu -->
-        <nav>
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Tin tức</a></li>
-                <li><a href="#">Sản phẩm</a></li>
-                <li><a href="#">Giới thiệu</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
-        </nav>
+    <!-- Thanh điều hướng nav -->
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Dịch vụ</a>
+        <a href="#">Liên hệ</a>
+    </nav>
 
-        <!-- Khung bao bọc nội dung chính và sidebar -->
-        <div class="main-wrapper">
-            
-            <!-- 3. Thẻ <section>: Khu vực chứa nội dung các bài viết -->
-            <section class="content-area">
-                
-                <!-- Thẻ <article>: Bài viết độc lập 1 -->
-                <article>
-                    <h2>Bài viết 1: Ưu điểm của thẻ HTML5 ngữ nghĩa</h2>
-                    <p class="meta">Đăng ngày: 15/10/2026 bởi Tác giả</p>
-                    <p>Sử dụng các thẻ HTML5 ngữ nghĩa giúp cấu trúc mã nguồn trở nên rõ ràng hơn, dễ bảo trì và hỗ trợ các công cụ tìm kiếm (SEO) phân tích nội dung website chính xác hơn nhiều so với việc chỉ dùng thẻ &lt;div&gt;.</p>
-                </article>
-
-                <!-- Thẻ <article>: Bài viết độc lập 2 -->
-                <article>
-                    <h2>Bài viết 2: Kết hợp Flexbox trong dàn trang HTML5</h2>
-                    <p class="meta">Đăng ngày: 14/10/2026 bởi Tác giả</p>
-                    <p>Khi áp dụng CSS Flexbox lên các thẻ &lt;section&gt; và &lt;aside&gt;, giao diện có thể tự động căn chỉnh khoảng cách, co giãn linh hoạt và tương thích tốt trên nhiều thiết bị màn hình khác nhau.</p>
-                </article>
-
-            </section>
-
-            <!-- 4. Thẻ <aside>: Sidebar chứa thông tin phụ, liên kết bên cạnh -->
-            <aside class="sidebar">
-                <h3>Danh mục tin tức</h3>
-                <ul>
-                    <li><a href="#">Hướng dẫn HTML5/CSS3</a></li>
-                    <li><a href="#">Kỹ thuật CSS Layout</a></li>
-                    <li><a href="#">Tối ưu hóa SEO Onpage</a></li>
-                </ul>
-
-                <div class="widget">
-                    <h3>Thông tin bổ sung</h3>
-                    <p>Sidebar chứa thông tin phụ, quảng cáo hoặc bài viết nổi bật liên quan đến trang chủ.</p>
-                </div>
-            </aside>
-
+    <!-- Khối nội dung chứa 3 cột xếp ngang bằng display: inline-block -->
+    <section>
+        <div class="box">
+            <h2>Cột 1</h2>
+            <p>Nội dung chi tiết của cột đầu tiên. Áp dụng display: inline-block để xếp nằm ngang cùng các cột khác.</p>
+        </div><div class="box">
+            <h2>Cột 2</h2>
+            <p>Nội dung chi tiết của cột thứ hai. Căn chỉnh kích thước và khoảng cách bằng width và padding.</p>
+        </div><div class="box">
+            <h2>Cột 3</h2>
+            <p>Nội dung chi tiết của cột thứ ba. Hoàn thiện bố cục 3 cột cân đối trên màn hình.</p>
         </div>
+    </section>
 
-        <!-- 5. Thẻ <footer>: Chân trang -->
-        <footer>
-            <p>&copy; 2026 CodeGym Practice - HTML5 & CSS Layout Design</p>
-        </footer>
-
-    </div>
+    <!-- Chân trang footer -->
+    <footer>
+        <p>Bản quyền &copy; 2026 - CodeGym Practice</p>
+    </footer>
 
 </body>
 </html>
