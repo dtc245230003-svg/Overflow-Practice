@@ -3,40 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố cục với display và inline-block</title>
+    <title>Bố cục với Float và Overflow</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Tiêu đề chính trang web -->
-    <h1>Bố cục trang web với display</h1>
+    <h1>Bố cục trang với float và overflow</h1>
 
-    <!-- Thanh điều hướng nav -->
-    <nav>
-        <a href="#">Trang chủ</a>
-        <a href="#">Giới thiệu</a>
-        <a href="#">Dịch vụ</a>
-        <a href="#">Liên hệ</a>
-    </nav>
-
-    <!-- Khối nội dung chứa 3 cột xếp ngang bằng display: inline-block -->
-    <section>
-        <div class="box">
-            <h2>Cột 1</h2>
-            <p>Nội dung chi tiết của cột đầu tiên. Áp dụng display: inline-block để xếp nằm ngang cùng các cột khác.</p>
-        </div><div class="box">
-            <h2>Cột 2</h2>
-            <p>Nội dung chi tiết của cột thứ hai. Căn chỉnh kích thước và khoảng cách bằng width và padding.</p>
-        </div><div class="box">
-            <h2>Cột 3</h2>
-            <p>Nội dung chi tiết của cột thứ ba. Hoàn thiện bố cục 3 cột cân đối trên màn hình.</p>
+    <!-- Khối container chứa 2 cột chia đôi 50% / 50% -->
+    <div class="container">
+        <div class="left-column">
+            <h2>Nội dung bên trái</h2>
+            <p>Sử dụng <code>float: left</code> với chiều rộng 50% để trôi về phía bên trái.</p>
         </div>
-    </section>
+        <div class="right-column">
+            <h2>Nội dung bên phải</h2>
+            <p>Sử dụng <code>float: right</code> với chiều rộng 50% để trôi về phía bên phải.</p>
+        </div>
+    </div>
 
-    <!-- Chân trang footer -->
-    <footer>
-        <p>Bản quyền &copy; 2026 - CodeGym Practice</p>
-    </footer>
+    <!-- Khối xử lý nội dung bị tràn bằng overflow: auto -->
+    <div class="overflow-box">
+        Đây là một đoạn nội dung rất dài mà chúng ta kiểm tra thuộc tính <code>overflow</code>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies nunc in mauris pharetra, a ultricies justo fermentum. Curabitur vel hendrerit erat, ut congue enim. Duis pulvinar euismod leo vel vulputate.
+    </div>
 
 </body>
 </html>
